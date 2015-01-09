@@ -8,7 +8,7 @@ ENV REDMINE_SQL_DATABASE redmine
 
 RUN echo "Asia/Tokyo" > /etc/timezone \
  && dpkg-reconfigure -f noninteractive tzdata \
- && apt-get update 
+ && apt-get update \
  && apt-get -y upgrade \
  && apt-get -y dist-upgrade \
  && apt-get install -y software-properties-common apache2 libapache2-mod-passenger wget git subversion imagemagick bundler ruby-nokogiri build-essential ruby-dev ruby-thor ruby-rmagick \
